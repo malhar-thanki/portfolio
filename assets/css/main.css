@@ -324,11 +324,12 @@ background: linear-gradient(to bottom right, #8735FF, #9E47EF); */
 
 .grid-item h3 {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 95%;
     margin-block-start: 0em;
 }
 
 .grid-item p {
+    text-align: left;
     font-size: 20px;
     color: #ffffff;
 }
