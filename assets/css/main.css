@@ -586,6 +586,7 @@ img {
 
 #footer a {
     color: rgb(122, 120, 120);
+    text-decoration: none;
 }
 
 .copyright {
