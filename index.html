@@ -10,15 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-brand">
-            <a href="#home">Portfolio - Malhar Thanki</a>
+            <a href="#home">Malhar Thanki</a>
         </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
         <ul class="nav-links">
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -29,50 +34,64 @@
     <section class="hero" id="home">
         <h1>Malhar Thanki</h1>
         <p>Data Engineer at Jio Platforms Limited</p>
-        <a href="mailto:malhar.thanki@example.com" class="btn">Get in Touch</a>
+        <a href="mailto:malhar.thanki@example.com" class="btn cool-btn">Get in Touch</a>
     </section>
 
     <!-- Skills -->
     <section class="section" id="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li><strong>Programming Languages:</strong> SQL, Python</li>
-            <li><strong>Big Data Tools & Technologies:</strong> Spark, PySpark, Spark SQL, YARN, Hadoop, Hive, Kafka, Sqoop</li>
-            <li><strong>Database Solutions & Warehousing:</strong> MySQL, MS SQL Server, Data Lakes, Data Warehousing, ETL, ELT, Stored Procedures</li>
-            <li><strong>Cloud Platforms:</strong> Azure Data Factory(ADF), Azure Synapse Analytics, Azure Data Lake Storage, Azure SQL, DataBricks</li>
-            <li><strong>DevOps, Version Control & Command Languages:</strong> Azure DevOps, CI/CD, GitHub</li>
-            <li><strong>Familiar:</strong> Airflow, Spark Structured Streaming</li>
-        </ul>
+        <div class="section-header">
+            <h2>Skills</h2>
+            <label class="switch">
+                <input type="checkbox" id="skills-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="skills-content">
+            <ul class="skills-list">
+                <li><strong>Programming Languages:</strong> SQL, Python</li>
+                <li><strong>Big Data Tools & Technologies:</strong> Spark, PySpark, Spark SQL, YARN, Hadoop, Hive, Kafka, Sqoop</li>
+                <li><strong>Database Solutions & Warehousing:</strong> MySQL, MS SQL Server, Data Lakes, Data Warehousing, ETL, ELT, Stored Procedures</li>
+                <li><strong>Cloud Platforms:</strong> Azure Data Factory (ADF), Azure Synapse Analytics, Azure Data Lake Storage, Azure SQL, Databricks, AWS</li>
+                <li><strong>DevOps, Version Control & Command Languages:</strong> Azure DevOps, CI/CD, GitHub</li>
+                <li><strong>Familiar:</strong> Airflow, Spark Structured Streaming</li>
+            </ul>
+            <div class="skills-graph-container" style="display: none;">
+                <canvas id="skillsChart"></canvas>
+            </div>
+        </div>
     </section>
 
     <!-- Experience -->
     <section class="section" id="experience">
         <h2>Experience</h2>
         <div class="exp-item">
-            <h3>Jio Data Platforms</h3>
-            <h4>Data Engineer</h4><br>
-            <p class="exp-duration">April 2023 – Present</p>
-            <ul class="exp-details">
-                <li>Designed and implemented scalable ETL pipelines using Azure Synapse Analytics and Azure Data Factory, ensuring real-time and batch data availability.</li>
-                <li>Automated failure detection and notifications using Azure Logic Apps, reducing manual interventions by 30% and improving pipeline reliability.</li>
-                <li>Utilized PySpark and SQL to process large datasets, optimizing performance for analytical use cases.</li>
-                <li>Developed robust data orchestration workflows using Azure Data Bricks and Synapse Analytics, enhancing data readiness for business reporting.</li>
-                <li>Developed price optimization use case for Vendavo, ingesting, cleaning, transforming, and serving data to enable efficient pricing strategies and analytics for stakeholders.</li>
-                <li>Collaborated with cross-functional teams to define requirements, troubleshoot data issues, and deliver solutions aligned with organizational goals.</li>
-                <li>Authored comprehensive documentation and mentored new team members, providing training sessions and resources to ensure seamless onboarding, knowledge transfer, and team efficiency.</li>
-            </ul>
-            <br>
-            <h4>Associate Data Engineer</h4><br>
-            <p class="exp-duration">July 2022 – April 2023</p>
-            <ul class="exp-details">
-                <li>Resolved production bugs 25% faster, minimizing downtime and increasing data availability, ensuring smoother operations and improved user experience.</li>
-                <li>Automated workflows and developed KPIs for 15+ use cases, transforming and loading data from diverse sources such as SAP, Neo4j, and Siteforge into Hadoop-based data warehouses.</li>
-                <li>Ensured data accuracy and reliability by optimizing ETL drivers, consistently delivering projects on time across multiple domains.</li>
-                <li>Migrated workflows from Hortonworks Data Platform (HDP) to Cloudera Data Platform (CDP), improving performance, reducing processing time by 30%, and achieving a 25% cost savings.</li>
-            </ul>
+            <h3 class="exp-company">Jio Data Platforms</h3>
+            <div class="exp-roles">
+                <div class="exp-role">
+                    <h4>Data Engineer <span class="exp-duration">April 2023 – Present</span></h4>
+                    <ul class="exp-details">
+                        <li>Designed and implemented scalable ETL pipelines using Azure Synapse Analytics and Azure Data Factory, ensuring real-time and batch data availability.</li>
+                        <li>Automated failure detection and notifications using Azure Logic Apps, reducing manual interventions by 30% and improving pipeline reliability.</li>
+                        <li>Utilized PySpark and SQL to process large datasets, optimizing performance for analytical use cases.</li>
+                        <li>Developed robust data orchestration workflows using Azure Data Bricks and Synapse Analytics, enhancing data readiness for business reporting.</li>
+                        <li>Developed price optimization use case for Vendavo, ingesting, cleaning, transforming, and serving data to enable efficient pricing strategies and analytics for stakeholders.</li>
+                        <li>Collaborated with cross-functional teams to define requirements, troubleshoot data issues, and deliver solutions aligned with organizational goals.</li>
+                        <li>Authored comprehensive documentation and mentored new team members, providing training sessions and resources to ensure seamless onboarding, knowledge transfer, and team efficiency.</li>
+                    </ul>
+                </div>
+                <div class="exp-role">
+                    <h4>Associate Data Engineer <span class="exp-duration">July 2022 – April 2023</span></h4>
+                    <ul class="exp-details">
+                        <li>Resolved production bugs 25% faster, minimizing downtime and increasing data availability, ensuring smoother operations and improved user experience.</li>
+                        <li>Automated workflows and developed KPIs for 15+ use cases, transforming and loading data from diverse sources such as SAP, Neo4j, and Siteforge into Hadoop-based data warehouses.</li>
+                        <li>Ensured data accuracy and reliability by optimizing ETL drivers, consistently delivering projects on time across multiple domains.</li>
+                        <li>Migrated workflows from Hortonworks Data Platform (HDP) to Cloudera Data Platform (CDP), improving performance, reducing processing time by 30%, and achieving a 25% cost savings.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
-    
+
     <!-- Projects -->
     <section class="section" id="projects">
         <h2>Projects</h2>
@@ -111,8 +130,8 @@
         <p>Interested in working together? Let’s connect.</p>
         <div class="contact-links">
             <a href="mailto:malhar.thanki@example.com">Email</a>
-            <a href="https://github.com/malhaaar">GitHub</a>
-            <a href="https://linkedin.com/in/malhar-thanki">LinkedIn</a>
+            <a href="https://github.com/malhaaar" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/malhar-thanki" target="_blank">LinkedIn</a>
         </div>
     </section>
 
@@ -120,5 +139,8 @@
     <footer class="footer">
         <p>© 2025 Malhar Thanki. All rights reserved.</p>
     </footer>
+
+    <!-- Link to new JavaScript file -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
