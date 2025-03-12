@@ -40,6 +40,7 @@ body {
     text-decoration: none;
     font-weight: 400;
     transition: color 0.3s;
+analytics: true;
 }
 
 .nav-links a:hover {
@@ -129,7 +130,9 @@ body {
 
 .btn:hover {
     transform: scale(1.1) translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 123, 255,
+
+ 0.4);
     background: linear-gradient(90deg, #0056b3, #003366);
 }
 
@@ -325,6 +328,7 @@ input:checked + .slider:before {
     font-weight: 400;
     margin-left: 10px;
     display: inline;
+    white-space: nowrap; /* Prevent date range from breaking */
 }
 
 .exp-details {
@@ -472,6 +476,17 @@ input:checked + .slider:before {
 
     .certifications-grid {
         grid-template-columns: 1fr;
+    }
+
+    .exp-role h4 {
+        display: block; /* Force title to a new line on mobile */
+    }
+
+    .exp-duration {
+        display: block; /* Force duration to a new line on mobile */
+        margin-left: 0;
+        margin-top: 5px;
+        white-space: nowrap; /* Keep date range intact */
     }
 }
 
