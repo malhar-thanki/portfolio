@@ -1,600 +1,254 @@
-
+/* Reset defaults and ensure smooth scrolling */
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
 
-
+/* Plain white background, full coverage */
 body {
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    background-color: #E8F1F2;
-    background-image: url(../Images/backg-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0;
+    background-color: #ffffff; /* Plain white */
     overflow-x: hidden;
     height: 100%;
     width: 100%;
+    font-family: 'Ubuntu', sans-serif; /* Consistent font */
 }
 
-hr{
+/* Remove horizontal rules background for consistency */
+hr {
     height: 1px;
-    background-color: rgb(189, 189, 189);
+    background-color: #bdbdbd;
     border: none;
 }
 
-
+/* Center content */
 .page-wrap {
     text-align: center;
-    
 }
 
-
-/*Header Design*/
-
+/* Header Design */
 .navigation {
     height: 55px;
-    font-family: 'Ubuntu', sans-serif;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .brand-name {
-    position: absolute;
-    padding-left: 30px;
-    float: left;
-    margin-top: 20px;
     font-size: 1.5em;
 }
 
 .brand-name a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-weight: 700;
 }
 
 .nav-container {
-    width: 100%;
-    margin: 0 auto;
-}
-
-nav {
-    display: inline;
-    float: right;
-    margin-right: 30px;
+    width: auto;
 }
 
 nav ul {
     list-style: none;
-    margin-left: 0px;
+    margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    float: left;
-    position: relative;
+    display: flex;
 }
 
 nav ul li a {
-    display: block;
-    padding: 0 20px;
-    margin-top: 15px;
-    color: rgb(0, 0, 0);
+    padding: 0 15px;
+    color: #000000;
     text-decoration: none;
     font-weight: 600;
 }
 
-
-
-
-
-
-
-
-/* Page One Design MAIN BANNER */
-
+/* Main Banner */
 .def123 {
-    /* display: inline-block; */
     width: 100%;
     text-align: center;
-    /* background-color: #E8F1F2; */
-    /* background-image: url(../Images/backg-1.jpg);
-    background-repeat: no-repeat; */
-    
-    font-family: 'Ubuntu', sans-serif;  
+    padding: 60px 20px;
 }
 
 .abcd {
-
-    padding: 80px 0px 0px;
-    text-align: center;
-    margin-bottom: 5px;
-    margin-top: 0px;
-    font-size: 200%;
-    color: rgb(0, 0, 0);
-    
+    margin: 0;
+    font-size: 2rem;
+    color: #000000;
 }
 
 .abcd h2 {
-    font-size: 60px;
+    font-size: 3rem;
+    margin: 0;
 }
 
 .d12 {
-    text-align: center;
-    width: 65%;
-    margin-right: 17.5%;
-    margin-left: 17.5%;
-    font-size: 170%;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.2rem;
     font-weight: 500;
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-family: 'Playfair Display', serif;
-
 }
-
-.d12 a {
-    display: inline-flexbox;
-}
-
 
 .button {
     display: inline-block;
-    color: white;
+    color: #ffffff;
     background-color: midnightblue;
-    text-align: center;
     padding: 10px 25px;
     text-decoration: none;
-    transition-duration: 0.4s;
-    font-size: 15px;
+    transition: 0.4s;
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 20px;
-    font-family: 'Ubuntu', sans-serif;
 }
 
 .button:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid midnightblue;
 }
 
-
-
-
-
-/* Page Two Design - EDUCATION*/
-
+/* Education Section */
 .ghi123 {
-    display: inline-block;
     width: 100%;
     text-align: center;
-    /* background-color: #E8F1F2;
-    background-image: url(../Images/backg-1.jpg);
-    background-repeat: no-repeat; */
-    padding-top: 30px;
-    padding-bottom: 30px;
-    
+    padding: 40px 20px;
 }
 
 .ghi123 h2 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 30px;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 30px;
     color: #000000;
-
-}
-
-.ghi123 p {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
-}
-
-#edu h2::before {
-    content: url(../Images/Xbefore.png);
-    margin-right: 15px;
-}
-
-#edu h2::after {
-    content: url(../Images/Xafter.png);
-    margin-left: 15px;
-    
 }
 
 .flex-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
-    align-content: stretch;
+    gap: 20px;
     margin-bottom: 40px;
 }
 
-.flex-items:nth-child(1) {
-    display: block;
-    color: #ffffff;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    margin: 50px;
-    width: 500px;
-    border: 0px solid;
-    border-radius: 0px;
-    padding: 20px;
-    background: #8735FF;
-/* background: -webkit-linear-gradient(top left, #8735FF, #9E47EF);
-background: -moz-linear-gradient(top left, #8735FF, #9E47EF);
-background: linear-gradient(to bottom right, #8735FF, #9E47EF); */
-    background: midnightblue;
-    text-align: left;
-    font-weight: 500;
-    font-size: 20px;
-    /* font-size: 15px; */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-  
+.flex-items:nth-child(1),
 .flex-items:nth-child(2) {
-    display: block;
     color: #ffffff;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    margin: 50px;
-    width: 500px;
-    border: 0px solid;
-    border-radius: 0px;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px;
     padding: 20px;
-    background: #8735FF;
-/* background: -webkit-linear-gradient(top left, #8735FF, #9E47EF);
-background: -moz-linear-gradient(top left, #8735FF, #9E47EF);
-background: linear-gradient(to bottom right, #8735FF, #9E47EF); */
     background: midnightblue;
     text-align: left;
-    font-weight: 500;
-    font-size: 20px;
-    /* font-size: 15px; */
+    font-size: 1.1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-
-
-
-
-/* Page Three Design - SKILLS */
-
+/* Skills Section */
 .jkl123 {
-    display: inline-block;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    /* background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 0% ); */
-    /* background-color: #FFD400; */
-    /* background-image: url(../Images/template-1.png); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    padding: 40px 20px;
 }
 
 .jkl123 h2 {
     color: #000000;
-    margin-top: 60px;
-    font-size: 30px;
-}
-
-.jkl123 h2::before {
-    content: url(../Images/Xbefore.png);
-    margin-right: 15px;
-}
-
-
-.jkl123 h2::after {
-    content: url(../Images/Xafter.png);
-    margin-left: 15px;
+    margin: 0 0 30px;
+    font-size: 2rem;
 }
 
 .grid-box {
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns:auto auto auto;
-    /* background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 0% );
-    background-color: #d4bfe9; */
-
-    padding: 10px;
-    margin-bottom: 60px;
-}
-
-.grid-item {
-    display: block;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    margin: 40px;
-    /* width: 300px; */
-    /* height: 200px; */
-    border: 0px solid;
-    border-radius: 10px;
-    padding: 30px;
-    background-color:#000000;
-    text-align: left;
-    font-weight: 500;
-    font-size: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.grid-item h3 {
-    color: #ffffff;
-    font-size: 23px;
-    margin-block-start: 0em;
-}
-
-.grid-item p {
-    font-size: 20px;
-    color: #ffffff;
-}
-
-
-
-
-
-/* Page Four Design - PROJECTS */
-
-.mno123 {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    /* background-color: #E8F1F2; */
-    font-family: 'Ubuntu', sans-serif;
-    padding-bottom: 40px;
-}
-
-.mno123 h2 {
-    margin-top: 60px;
-    font-size: 30px;
-    text-align: center;
-}
-
-.mno123 h2::before {
-    content: url(../Images/Xbefore.png);
-    margin-right: 15px;
-}
-
-.mno123 h2::after {
-    content: url(../Images/Xafter.png);
-    margin-left: 15px;
-}
-
-.row {
-    
-    margin-top: 30px;
-    margin-bottom: 30px;
-    column-count: 2;
-    display: inline-flex;
-    flex-wrap: wrap;
     justify-content: center;
-    /* padding-right: 20%;
-    padding-left: 20%; */
-}
-
-.column {
-    
-    padding: 30px;
-    width: 210px;
-    font-size: 20px;
-    font-weight: 500;
-    border: 0px solid;
-    border-radius: 50%;
-    /* background-image: url(../Images/template-2.png); */
-    background-color: #0CCA98;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.column:nth-child(1) {
-    color: rgb(0, 0, 0);
-    margin: 15px;
-    background-color: #0CCA98;
-}
-.column:nth-child(2) {
-    color: rgb(0, 0, 0);
-    margin: 15px;
-}
-
-.column:nth-child(3) {
-    background-color: #0CCA98;
-    color: rgb(0, 0, 0);
-    margin: 15px;
-    padding-bottom: 60px;
-    padding-top: 60px;
-}
-
-
-/* Page Five Design - CERTIFICATES */
-
-.pqr123 {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    /* background-color: #FFD400; */
-    /* background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 0% );
-    background-color: #d4bfe9; */
-    /* background-image: url(../Images/template-1.png); */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.pqr123 h2 {
-    color: #000000;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    
-}
-
-.pqr123 h2::before {
-    content: url(../Images/Xbefore.png);
-    margin-right: 15px;
-}
-
-
-.pqr123 h2::after {
-    content: url(../Images/Xafter.png);
-    margin-left: 15px;
-}
-
-.table {
-    text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 80px;
-    font-family: 'Ubuntu', sans-serif;
+    gap: 20px;
+    padding: 10px;
     margin-bottom: 40px;
 }
 
-.tab {
-    
-    
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-thead {
-    font-size: 30px;
-}
-
-th, td {
-    font-size: 19px;
-    border: 4px solid slateblue ;
-    padding: 1rem;
-    border-radius: 1px;
-    color: #000000;
-}
-
-
-
-tr:nth-child(1) { background: #E8F1F2; }
-tr:nth-child(2) { background: #E8F1F2; }
-tr:nth-child(3) { background: #E8F1F2; }
-tr:nth-child(4) { background: #E8F1F2; }
-tr:nth-child(5) { background: #E8F1F2; }
-tr:nth-child(6) { background: #E8F1F2; }
-
-
-
-
-
-/* Page Six Design - CONTACTS */
-
-.stu123 {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    /* background-color: #EF767A; */
-    font-family: 'Ubuntu', sans-serif;
-    padding-bottom: 40px;
-}
-
-
-
-.stu123 h2 {
-    font-size: 30px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.stu123 h2::after { 
-    content: url(../Images/Xafter.png);
-    padding-left: 15px;
-    margin: 0%;
-    border: 0%;
-}
-
-.stu123 h2::before {
-    content: url(../Images/Xbefore.png);
-    padding-right: 15px;
-    margin: 0%;
-    border: 0%;
-}
-
-.stu123 header {
-    margin-bottom: 50px;
-    
-}
-
-.stu123 p {
-    font-size: 25px;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.5em;
-}
-
-#small-box {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-    flex-wrap: wrap;
-}
-
-#smalls {
-    width: 200px;
-    margin-left: 40px;
-
-}
-
-
-img {
-    width: 120px;
-    height: 120px;
-}
-
-
-/* Page Seven Design - FOOTER */
-.vwx123 {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    background-color: #e0dcdcb2;
-    font-family: 'Ubuntu', sans-serif;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
-    overflow: hidden;
-    
-}
-
-#footer {
-    display: inline-block;
-    margin-top: 50px;
-    overflow: hidden;
-}
-
-#footer ul li {
-    display: inline;
-    font-family: 'Ubuntu', sans-serif;
+.grid-item {
+    margin: 10px;
     padding: 20px;
-    color: rgb(122, 120, 120);
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    flex: 1 1 300px; /* Grow/shrink with min width */
+    max-width: 400px;
 }
 
-#footer a {
-    color: rgb(122, 120, 120);
-    text-decoration: none;
+/* Projects Section */
+.mno123 {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-.copyright {
-    display: inline-block;
-    color: rgb(122, 120, 120);
-    margin-bottom: 60px;
-    overflow: hidden;
+.mno123 h2 {
+    font-size: 2rem;
+    margin: 0 0 30px;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
 
+.column {
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 1.1rem;
+    background-color: #0cca98;
+    color: #000000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li a {
+        padding: 10px 0;
+    }
+    .abcd h2 {
+        font-size: 2rem;
+    }
+    .d12 {
+        font-size: 1rem;
+    }
+    .flex-items:nth-child(1),
+    .flex-items:nth-child(2) {
+        max-width: 100%;
+    }
+    .grid-item {
+        flex: 1 1 100%;
+    }
+    .column {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .abcd {
+        font-size: 1.5rem;
+    }
+    .button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    .ghi123 h2,
+    .jkl123 h2,
+    .mno123 h2 {
+        font-size: 1.5rem;
+    }
+}
