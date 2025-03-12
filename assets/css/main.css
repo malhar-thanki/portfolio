@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
-    color: #333;
+    background-color: #ffffff; /* White background from reference */
+    color: #4A4A4A; /* Dark gray text from reference */
     line-height: 1.6;
 }
 
@@ -24,7 +24,7 @@ body {
 .nav-brand a {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #008080; /* Teal accent */
+    color: #007BFF; /* Blue accent for brand name */
     text-decoration: none;
 }
 
@@ -35,14 +35,14 @@ body {
 }
 
 .nav-links a {
-    color: #333;
+    color: #4A4A4A; /* Dark gray for nav links */
     text-decoration: none;
     font-weight: 400;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #008080;
+    color: #007BFF; /* Blue accent on hover */
 }
 
 /* Hero Section */
@@ -54,19 +54,20 @@ body {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: #4A4A4A; /* Dark gray for heading */
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #666;
+    color: #4A4A4A; /* Dark gray for text */
     margin-bottom: 20px;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #008080;
-    color: #fff;
+    background-color: #007BFF; /* Blue accent for button */
+    color: #ffffff; /* White text on button */
     text-decoration: none;
     font-weight: 700;
     border-radius: 5px;
@@ -74,7 +75,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #006666;
+    background-color: #0056b3; /* Slightly darker blue on hover */
 }
 
 /* General Section Styling */
@@ -87,7 +88,7 @@ body {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #008080;
+    color: #007BFF; /* Blue accent for section headings */
 }
 
 /* Skills */
@@ -101,7 +102,7 @@ body {
 }
 
 .skills-list strong {
-    color: #333;
+    color: #4A4A4A; /* Dark gray for bold text */
 }
 
 /* Projects */
@@ -113,10 +114,11 @@ body {
 .project h3 {
     font-size: 1.3rem;
     margin-bottom: 5px;
+    color: #4A4A4A; /* Dark gray for project titles */
 }
 
 .project p {
-    color: #666;
+    color: #4A4A4A; /* Dark gray for project descriptions */
 }
 
 /* Education */
@@ -127,10 +129,11 @@ body {
 .edu-item h3 {
     font-size: 1.3rem;
     margin-bottom: 5px;
+    color: #4A4A4A; /* Dark gray for education titles */
 }
 
 .edu-item p {
-    color: #666;
+    color: #4A4A4A; /* Dark gray for education details */
 }
 
 /* Contact */
@@ -142,14 +145,14 @@ body {
 }
 
 .contact-links a {
-    color: #008080;
+    color: #007BFF; /* Blue accent for contact links */
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s;
 }
 
 .contact-links a:hover {
-    color: #006666;
+    color: #0056b3; /* Slightly darker blue on hover */
 }
 
 /* Footer */
@@ -157,7 +160,7 @@ body {
     text-align: center;
     padding: 20px;
     border-top: 1px solid #eee;
-    color: #666;
+    color: #4A4A4A; /* Dark gray for footer text */
     font-size: 0.9rem;
 }
 
