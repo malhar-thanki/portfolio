@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #ffffff; /* White background from reference */
-    color: #4A4A4A; /* Dark gray text from reference */
+    background-color: #ffffff;
+    color: #4A4A4A;
     line-height: 1.6;
 }
 
@@ -19,12 +19,13 @@ body {
     align-items: center;
     padding: 20px 40px;
     border-bottom: 1px solid #eee;
+    position: relative;
 }
 
 .nav-brand a {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #007BFF; /* Blue accent for brand name */
+    color: #007BFF;
     text-decoration: none;
 }
 
@@ -35,14 +36,60 @@ body {
 }
 
 .nav-links a {
-    color: #4A4A4A; /* Dark gray for nav links */
+    color: #4A4A4A;
     text-decoration: none;
     font-weight: 400;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #007BFF; /* Blue accent on hover */
+    color: #007BFF;
+}
+
+/* Mobile Nav Toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #4A4A4A;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #4A4A4A;
+    transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+.hamburger-active {
+    background: transparent;
+}
+
+.hamburger-active::before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-active::after {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -54,33 +101,56 @@ body {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #4A4A4A; /* Dark gray for heading */
+    color: #4A4A4A;
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #4A4A4A; /* Dark gray for text */
+    color: #4A4A4A;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
+/* Button Styling */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF; /* Blue accent for button */
-    color: #ffffff; /* White text on button */
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    color: #ffffff;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 25px;
+    border: 2px solid #007BFF;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Slightly darker blue on hover */
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+    background: linear-gradient(90deg, #0056b3, #003366);
+}
+
+.cool-btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease;
+}
+
+.cool-btn:hover::after {
+    width: 100%;
 }
 
 /* General Section Styling */
 .section {
-    padding: 60px 40px;
+    padding: 40px 40px;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -88,10 +158,68 @@ body {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #007BFF; /* Blue accent for section headings */
+    color: #007BFF;
+}
+
+/* Section Header with Toggle */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007BFF; /* Green when on */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
 }
 
 /* Skills */
+.skills-content {
+    transition: all 0.3s ease;
+}
+
 .skills-list {
     list-style: none;
 }
@@ -102,80 +230,60 @@ body {
 }
 
 .skills-list strong {
-    color: #4A4A4A; /* Dark gray for bold text */
+    color: #4A4A4A;
 }
 
-/* Projects */
-.project-list {
-    display: grid;
-    gap: 20px;
+/* Skills Graph Container */
+.skills-graph-container {
+    max-width: 100%;
 }
 
-.project h3 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-    color: #4A4A4A; /* Dark gray for project titles */
-}
-
-.project p {
-    color: #4A4A4A; /* Dark gray for project descriptions */
-}
-
-/* Education */
-.edu-item {
-    margin-bottom: 20px;
-}
-
-.edu-item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-    color: #4A4A4A; /* Dark gray for education titles */
-}
-
-.edu-item p {
-    color: #4A4A4A; /* Dark gray for education details */
-}
-
-/* Contact */
-.contact-links {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.contact-links a {
-    color: #007BFF; /* Blue accent for contact links */
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s;
-}
-
-.contact-links a:hover {
-    color: #0056b3; /* Slightly darker blue on hover */
+#skillsChart {
+    max-width: 100%;
+    height: 400px !important;
 }
 
 /* Experience Section */
 .exp-item {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-.exp-item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
+.exp-company {
+    font-size: 1.5rem;
     color: #4A4A4A;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.exp-roles {
+    margin-left: 20px;
+}
+
+.exp-role {
+    margin-bottom: 25px;
+}
+
+.exp-role h4 {
+    font-size: 1.3rem;
+    color: #4A4A4A;
+    font-weight: 700;
+    margin: 0;
+    display: inline;
 }
 
 .exp-duration {
-    font-size: 1.1rem;
-    color: #007BFF; /* Blue accent for duration */
-    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #007BFF;
+    font-weight: 400;
+    margin-left: 10px;
+    display: inline;
 }
 
 .exp-details {
     list-style: none;
     padding-left: 20px;
     position: relative;
+    margin-top: 5px;
 }
 
 .exp-details li {
@@ -193,12 +301,54 @@ body {
     font-size: 1.2rem;
 }
 
-/* Adjust existing hero section for updated title */
-.hero p {
-    font-size: 1.2rem;
+/* Projects */
+.project-list {
+    display: grid;
+    gap: 20px;
+}
+
+.project h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
     color: #4A4A4A;
+}
+
+.project p {
+    color: #4A4A4A;
+}
+
+/* Education */
+.edu-item {
     margin-bottom: 20px;
-    font-weight: 500; /* Slightly bolder to reflect seniority */
+}
+
+.edu-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #4A4A4A;
+}
+
+.edu-item p {
+    color: #4A4A4A;
+}
+
+/* Contact */
+.contact-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-links a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: #0056b3;
 }
 
 /* Footer */
@@ -206,33 +356,70 @@ body {
     text-align: center;
     padding: 20px;
     border-top: 1px solid #eee;
-    color: #4A4A4A; /* Dark gray for footer text */
+    color: #4A4A4A;
     font-size: 0.9rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav {
-        flex-direction: column;
         padding: 20px;
-        gap: 20px;
+        flex-wrap: wrap;
     }
+
+    .nav-toggle {
+        display: block;
+    }
+
     .nav-links {
+        display: none;
         flex-direction: column;
         text-align: center;
         gap: 10px;
+        width: 100%;
+        padding: 20px 0;
+        background: #ffffff;
+        border-top: 1px solid #eee;
     }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+
     .hero {
         padding: 60px 20px;
     }
+
     .hero h1 {
         font-size: 2rem;
     }
+
     .section {
-        padding: 40px 20px;
+        padding: 30px 20px;
     }
+
     .section h2 {
         font-size: 1.5rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .switch {
+        width: 50px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(20px);
     }
 }
 
@@ -240,10 +427,12 @@ body {
     .hero h1 {
         font-size: 1.8rem;
     }
+
     .hero p {
         font-size: 1rem;
     }
+
     .btn {
-        padding: 8px 16px;
+        padding: 10px 20px;
     }
 }
