@@ -155,6 +155,52 @@ body {
     color: #0056b3; /* Slightly darker blue on hover */
 }
 
+/* Experience Section */
+.exp-item {
+    margin-bottom: 30px;
+}
+
+.exp-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #4A4A4A;
+}
+
+.exp-duration {
+    font-size: 1.1rem;
+    color: #007BFF; /* Blue accent for duration */
+    margin-bottom: 10px;
+}
+
+.exp-details {
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
+}
+
+.exp-details li {
+    font-size: 1rem;
+    color: #4A4A4A;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.exp-details li::before {
+    content: "•";
+    color: #007BFF;
+    position: absolute;
+    left: -20px;
+    font-size: 1.2rem;
+}
+
+/* Adjust existing hero section for updated title */
+.hero p {
+    font-size: 1.2rem;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+    font-weight: 500; /* Slightly bolder to reflect seniority */
+}
+
 /* Footer */
 .footer {
     text-align: center;
