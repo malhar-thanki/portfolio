@@ -279,16 +279,16 @@ input:checked + .slider:before {
 .cert-link {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #4dabf7; /* Lighter, muted blue */
+    background-color: #4dabf7;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 500;
-    transition: background-color 0.3s ease; /* Only transition background color */
+    transition: background-color 0.3s ease;
 }
 
 .cert-link:hover {
-    background-color: #1d8cf8; /* Slightly darker on hover, but still muted */
+    background-color: #1d8cf8;
 }
 
 /* Experience Section */
@@ -325,6 +325,7 @@ input:checked + .slider:before {
     font-weight: 400;
     margin-left: 10px;
     display: inline;
+    white-space: nowrap;
 }
 
 .exp-details {
@@ -381,6 +382,22 @@ input:checked + .slider:before {
 }
 
 /* Contact */
+.contact-section {
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.contact-section h2 {
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
 .contact-links {
     display: flex;
     gap: 20px;
@@ -388,15 +405,25 @@ input:checked + .slider:before {
     margin-top: 20px;
 }
 
-.contact-links a {
-    color: #007BFF;
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s;
+    border-radius: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contact-links a:hover {
-    color: #0056b3;
+.contact-btn i {
+    margin-right: 8px;
+}
+
+.contact-btn:hover {
+    background-color: #1d8cf8;
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -472,6 +499,30 @@ input:checked + .slider:before {
 
     .certifications-grid {
         grid-template-columns: 1fr;
+    }
+
+    .exp-role h4 {
+        display: block;
+    }
+
+    .exp-duration {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+        white-space: nowrap;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center; /* Center buttons horizontally */
+        align-items: center; /* Center buttons vertically */
+    }
+
+    .contact-btn {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
     }
 }
 
