@@ -111,6 +111,13 @@ body {
     font-weight: 500;
 }
 
+/* Hero Buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
 /* Button Styling (General) */
 .btn {
     display: inline-block;
@@ -159,6 +166,62 @@ body {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #007BFF;
+}
+
+/* About Me Section */
+.about-me-section .sql-container {
+    width: 100%;
+    background-color: #f8f9fa; /* Light background from portfolio */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Blue shadow to match accents */
+}
+
+.about-me-section .sql-window {
+    border: 1px solid #007BFF; /* Blue border for consistency */
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.about-me-section .sql-query {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px; /* Space between query and button */
+}
+
+.about-me-section .sql-query span {
+    font-family: 'Consolas', 'Courier New', monospace; /* Monospaced for query */
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+.about-me-section #runQuery {
+    background-color: #007BFF; /* Blue accent from portfolio */
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-me-section #runQuery:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+.about-me-section .sql-output {
+    background-color: #f8f9fa; /* Consistent with container */
+    padding: 10px;
+    border-radius: 4px;
+    min-height: 50px;
+    font-size: 16px;
+    color: #4A4A4A;
+    display: none; /* Hidden by default for toggle */
 }
 
 /* Section Header with Toggle */
@@ -469,6 +532,11 @@ input:checked + .slider:before {
         font-size: 2rem;
     }
 
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     .section {
         padding: 30px 20px;
     }
@@ -512,6 +580,36 @@ input:checked + .slider:before {
         white-space: nowrap;
     }
 
+    .about-me-section .sql-container {
+        padding: 15px;
+    }
+
+    .about-me-section .sql-window {
+        padding: 10px;
+    }
+
+    .about-me-section .sql-query {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; /* Adjusted gap for mobile */
+    }
+
+    .about-me-section .sql-query span {
+        font-size: 14px;
+    }
+
+    .about-me-section #runQuery {
+        max-width: 100px; /* Fixed max-width for mobile */
+        padding: 6px 12px; /* Adjusted padding for compact size */
+        font-size: 14px;
+    }
+
+    .about-me-section .sql-output {
+        font-size: 14px;
+        min-height: 40px;
+        padding: 8px;
+    }
+
     .contact-links {
         flex-direction: column;
         gap: 15px;
@@ -537,5 +635,20 @@ input:checked + .slider:before {
 
     .btn {
         padding: 10px 20px;
+    }
+
+    .about-me-section .sql-query span {
+        font-size: 12px;
+    }
+
+    .about-me-section #runQuery {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .about-me-section .sql-output {
+        font-size: 12px;
+        min-height: 30px;
+        padding: 6px;
     }
 }
