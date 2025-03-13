@@ -35,7 +35,24 @@
     <section class="hero" id="home">
         <h1>Malhar Thanki</h1>
         <p>Data Engineer at Jio Platforms Limited</p>
-        <a href="mailto:malhar.thanki@example.com" class="btn cool-btn">Get in Touch</a>
+        <div class="hero-buttons">
+            <a href="/cdn-cgi/l/email-protection#2e434f42464f5c005a464f4045476e4b564f435e424b004d4143" class="btn cool-btn">Get in Touch</a>
+            <a href="assets/resume.pdf" target="_blank" class="btn cool-btn">View Resume</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section about-me-section" id="about">
+        <h2>About Me</h2>
+        <div class="sql-container">
+            <div class="sql-window">
+                <div class="sql-query">
+                    <span>SELECT about_me FROM dbo.portfolio;</span>
+                    <button id="runQuery">Run</button>
+                </div>
+                <div id="output" class="sql-output"></div>
+            </div>
+        </div>
     </section>
 
     <!-- Skills -->
@@ -152,7 +169,7 @@
         <h2>Contact</h2>
         <p>Interested in working together? Let’s connect.</p>
         <div class="contact-links">
-            <a href="mailto:malhar.thanki@example.com" class="contact-btn">
+            <a href="/cdn-cgi/l/email-protection#2e434f42464f5c005a464f4045476e4b564f435e424b004d4143" class="contact-btn">
                 <i class="fas fa-envelope"></i> Email
             </a>
             <a href="https://github.com/malhaaar" target="_blank" class="contact-btn">
@@ -169,7 +186,9 @@
         <p>© 2025 Malhar Thanki. All rights reserved.</p>
     </footer>
 
-    <!-- Link to new JavaScript file -->
+    <!-- Link to JavaScript file -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'91f942e1783fbf68',t:'MTc0MTg0NTEwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>

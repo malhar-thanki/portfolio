@@ -9,6 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.toggle('hamburger-active');
     });
 
+    // About Me Toggle
+    const runQueryButton = document.getElementById('runQuery');
+    const output = document.getElementById('output');
+    if (runQueryButton && output) {
+        runQueryButton.addEventListener('click', function() {
+            if (output.style.display === 'none' || output.style.display === '') {
+                output.textContent = "Hi! I'm a passionate developer with a love for creating interactive and user-friendly web applications. Always eager to learn and explore new technologies!";
+                output.style.display = 'block';
+            } else {
+                output.style.display = 'none';
+            }
+        });
+    }
+
     // Skills Graph Toggle
     const toggleCheckbox = document.getElementById('skills-toggle');
     const skillsList = document.querySelector('.skills-list');
