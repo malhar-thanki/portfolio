@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 </head>
 <body>
@@ -23,9 +24,8 @@
         </button>
         <ul class="nav-links">
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -33,11 +33,11 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>Malhar Thanki</h1>
-        <p>Data Engineer at Jio Platforms Limited</p>
+        <h1>Big Data Engineer<span class="tagline">Extract | Load | Transform | Govern</span></h1>
+        <p></p>
         <div class="hero-buttons">
-            <a href="/cdn-cgi/l/email-protection#2e434f42464f5c005a464f4045476e4b564f435e424b004d4143" class="btn cool-btn">Get in Touch</a>
-            <a href="assets/resume.pdf" target="_blank" class="btn cool-btn">View Resume</a>
+            <a href="mailto:thankimalhar@gmail.com" class="btn cool-btn">Get in Touch</a>
+            <a href="assets/Malhar_Thanki_DE_Resume_2025.pdf" target="_blank" class="btn cool-btn">View Resume</a>
         </div>
     </section>
 
@@ -47,7 +47,7 @@
         <div class="sql-container">
             <div class="sql-window">
                 <div class="sql-query">
-                    <span>SELECT about_me FROM dbo.portfolio;</span>
+                    <span>SELECT about_me FROM portfolio.malhar_thanki;</span>
                     <button id="runQuery">Run</button>
                 </div>
                 <div id="output" class="sql-output"></div>
@@ -67,15 +67,23 @@
         <div class="skills-content">
             <ul class="skills-list">
                 <li><strong>Programming Languages:</strong> SQL, Python</li>
-                <li><strong>Big Data Tools & Technologies:</strong> Spark, PySpark, Spark SQL, YARN, Hadoop, Hive, Kafka, Sqoop</li>
-                <li><strong>Database Solutions & Warehousing:</strong> MySQL, MS SQL Server, Data Lakes, Data Warehousing, ETL, ELT, Stored Procedures</li>
-                <li><strong>Cloud Platforms:</strong> Azure Data Factory (ADF), Azure Synapse Analytics, Azure Data Lake Storage, Azure SQL, Databricks, AWS</li>
-                <li><strong>DevOps, Version Control & Command Languages:</strong> Azure DevOps, CI/CD, GitHub</li>
-                <li><strong>Familiar:</strong> Airflow, Spark Structured Streaming</li>
+                <li><strong>Big Data Tools & Technologies:</strong> Spark, PySpark, Spark SQL, YARN, Hadoop, Hive, Kafka, Spark structured streaming</li>
+                <li><strong>Database Solutions & Warehousing:</strong> MySQL, MSSQL Server, Data Lakes, Data Warehousing, ETL/ELT, Stored Procedures</li>
+                <li><strong>Cloud Platforms:</strong> Azure Data Factory(ADF), Azure Synapse Analytics, Azure Data Lake Storage(ADLS), AWS Glue, AWS EMR,
+                    Amazon S3, Databricks, Snowflake</li>
+                <li><strong>DevOps, Version Control & Command Languages:</strong> Azure DevOps, CI/CD, GitHub, Airflow</li>
             </ul>
             <div class="skills-graph-container" style="display: none;">
                 <canvas id="skillsChart"></canvas>
             </div>
+        </div>
+    </section>
+
+    <!-- Key Competencies -->
+    <section class="section key-competencies-section" id="key-competencies">
+        <h2>Key Competencies</h2>
+        <div class="competencies-container">
+            <canvas id="competenciesChart"></canvas>
         </div>
     </section>
 
@@ -88,22 +96,22 @@
                 <div class="exp-role">
                     <h4>Data Engineer <span class="exp-duration">April 2023 – Present</span></h4>
                     <ul class="exp-details">
-                        <li>Designed and implemented scalable ETL pipelines using Azure Synapse Analytics and Azure Data Factory, ensuring real-time and batch data availability.</li>
-                        <li>Automated failure detection and notifications using Azure Logic Apps, reducing manual interventions by 30% and improving pipeline reliability.</li>
-                        <li>Utilized PySpark and SQL to process large datasets, optimizing performance for analytical use cases.</li>
-                        <li>Developed robust data orchestration workflows using Azure Data Bricks and Synapse Analytics, enhancing data readiness for business reporting.</li>
-                        <li>Developed price optimization use case for Vendavo, ingesting, cleaning, transforming, and serving data to enable efficient pricing strategies and analytics for stakeholders.</li>
+                        <li>Designed and deployed scalable data pipelines using <b>Azure Synapse Analytics</b> and <b>Azure Data Factory</b>, enabling real-time and batch data processing for analytics, with optimized data modeling for storage and retrieval.</li>
+                        <li>Processed large-scale datasets, optimized SQL queries and Spark jobs by refactoring code, <b>improving data processing speed by 15%</b> and saving 20+ cloud compute hours monthly.</li>
+                        <li>Integrated multi-source data (inventory, customer, media, sensor) from <b>Azure, Oracle, MySQL, ODBC, and HDFS</b> in formats like Parquet, JSON, and CSV, managing millions of rows daily in Azure Data Lake Storage (ADLS).</li>
+                        <li><b>Automated failure alerts via Azure Logic Apps</b>, reducing manual interventions by 25% and enhancing pipeline reliability.</li>
+                        <li>Worked on a near real-time (NRT) SAP data ingestion PoC using <b>Spark Structured Streaming</b>, reducing latency and boosting data availability.</li>
                         <li>Collaborated with cross-functional teams to define requirements, troubleshoot data issues, and deliver solutions aligned with organizational goals.</li>
-                        <li>Authored comprehensive documentation and mentored new team members, providing training sessions and resources to ensure seamless onboarding, knowledge transfer, and team efficiency.</li>
+                        <li>Authored detailed documentation and mentored junior engineers, delivering training to streamline onboarding and knowledge sharing.</li>
                     </ul>
                 </div>
                 <div class="exp-role">
                     <h4>Associate Data Engineer <span class="exp-duration">July 2022 – April 2023</span></h4>
                     <ul class="exp-details">
-                        <li>Resolved production bugs 25% faster, minimizing downtime and increasing data availability, ensuring smoother operations and improved user experience.</li>
-                        <li>Automated workflows and developed KPIs for 15+ use cases, transforming and loading data from diverse sources such as SAP, Neo4j, and Siteforge into Hadoop-based data warehouses.</li>
-                        <li>Ensured data accuracy and reliability by optimizing ETL drivers, consistently delivering projects on time across multiple domains.</li>
-                        <li>Migrated workflows from Hortonworks Data Platform (HDP) to Cloudera Data Platform (CDP), improving performance, reducing processing time by 30%, and achieving a 25% cost savings.</li>
+                        <li>Built and maintained automated ETL pipelines with <b>Hadoop, Hive, and Kafka</b>, ingesting gigabytes of data daily for business analytics.</li>
+                        <li>Automated workflows for multiple use cases, transforming and loading data from diverse sources <b>data warehouses</b>.</li>
+                        <li>Resolved critical pipeline issues with rapid production fixes, leveraging KEDB style document to reduce downtime by 25%.</li>
+                        <li>Led 12-15 use cases including Hortonworks Data Platform (HDP) to Cloudera Data Platform (CDP) migration, managing end-to-end data workflows from ingestion to transformation.</li>
                     </ul>
                 </div>
             </div>
@@ -115,52 +123,70 @@
         <h2>Certifications</h2>
         <div class="certifications-grid">
             <div class="cert-card">
-                <h3>Microsoft Certified: Azure Data Engineer Associate</h3>
-                <p>Validates expertise in designing and implementing data solutions on Azure.</p>
-                <a href="https://www.microsoft.com/learning/certification-exams" class="btn cert-link" target="_blank">View Certificate</a>
+                <h3>Microsoft Certified: DP-203 Azure Data Engineer Associate</h3>
+                <p>Understanding of common data engineering tasks to implement and manage data engineering workloads on Microsoft Azure, using a number of Azure services.</p>
+                <a href="https://learn.microsoft.com/api/credentials/share/en-gb/MalharThanki-4905/5A479747182EC708?sharingId=60058BBEC203B628" class="btn cert-link" target="_blank">Show credential</a>
             </div>
             <div class="cert-card">
-                <h3>Microsoft Certified: Azure Solutions Architect Expert</h3>
-                <p>Demonstrates skills in designing cloud and hybrid solutions on Azure.</p>
-                <a href="https://www.microsoft.com/learning/certification-exams" class="btn cert-link" target="_blank">View Certificate</a>
+                <h3>Microsoft Certified: AZ-900 Azure Fundamentals</h3>
+                <p>Foundational knowledge of cloud concepts, core Azure services, plus Azure management and governance features and tools.</p>
+                <a href="https://learn.microsoft.com/api/credentials/share/en-gb/MalharThanki-4905/8EFE8F1C4137BAAD?sharingId=60058BBEC203B628" class="btn cert-link" target="_blank">Show credential</a>
             </div>
             <div class="cert-card">
-                <h3>Microsoft Certified: Azure Administrator Associate</h3>
-                <p>Confirms proficiency in managing Azure resources and services.</p>
-                <a href="https://www.microsoft.com/learning/certification-exams" class="btn cert-link" target="_blank">View Certificate</a>
+                <h3>Microsoft Certified: DP-900 Azure Data Fundamentals</h3>
+                <p>Knowledge of core data concepts and related Microsoft Azure data services.</p>
+                <a href="https://learn.microsoft.com/api/credentials/share/en-gb/MalharThanki-4905/88C05EF76FB9CC87?sharingId=60058BBEC203B628" class="btn cert-link" target="_blank">Show credential</a>
             </div>
         </div>
     </section>
 
     <!-- Projects -->
-    <section class="section" id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Automated Timer Switches</h3>
-                <p>Built with PIC microcontroller for efficient timing control.</p>
+    <!-- 
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>Automated Timer Switches</h3>
+                    <p>Built with PIC microcontroller for efficient timing control.</p>
+                </div>
+                <div class="project">
+                    <h3>Flex Sensor Glove</h3>
+                    <p>Simulated device control using PIC microcontroller and flex sensors.</p>
+                </div>
+                <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>A minimalist digital resume crafted with HTML and CSS.</p>
+                </div>
             </div>
-            <div class="project">
-                <h3>Flex Sensor Glove</h3>
-                <p>Simulated device control using PIC microcontroller and flex sensors.</p>
-            </div>
-            <div class="project">
-                <h3>Portfolio Website</h3>
-                <p>A minimalist digital resume crafted with HTML and CSS.</p>
-            </div>
-        </div>
-    </section>
+        </section> 
+    -->
 
     <!-- Education -->
     <section class="section" id="education">
         <h2>Education</h2>
         <div class="edu-item">
             <h3>B.E. Electronics & Telecommunication</h3>
-            <p>AISSMS Institute of Information Technology, Pune (SPPU)<br>2018-2022<br>CGPA: F.E. 8.96, S.E. 9.10, T.E. 10.00</p>
+            <p>
+                <i>University of Pune (SPPU)</i><br>2018 - 2022
+                <br>
+                9.26 CGPA
+            </p>
         </div>
         <div class="edu-item">
-            <h3>Class XII & X</h3>
-            <p>Kendriya Vidyalaya Ganeshkhind, Pune (CBSE)<br>XII: 84.6% | X: 88.4% (9.6 CGPA)</p>
+            <h3>HSC</h3>
+            <p>
+                <i>Kendriya Vidyalaya Ganeshkhind, Pune (CBSE)</i><br>
+                2017 - 2018<br>
+                XII: 84.6%
+            </p>
+        </div>
+        <div class="edu-item">
+            <h3>SSC</h3>
+            <p>
+                <i>Kendriya Vidyalaya Ganeshkhind, Pune (CBSE)</i><br>
+                2015 - 2016<br>
+                88.4% (9.6 CGPA)
+            </p>
         </div>
     </section>
 
@@ -169,13 +195,13 @@
         <h2>Contact</h2>
         <p>Interested in working together? Let’s connect.</p>
         <div class="contact-links">
-            <a href="/cdn-cgi/l/email-protection#2e434f42464f5c005a464f4045476e4b564f435e424b004d4143" class="contact-btn">
+            <a href="mailto:thankimalhar@gmail.com" class="contact-btn">
                 <i class="fas fa-envelope"></i> Email
             </a>
-            <a href="https://github.com/malhaaar" target="_blank" class="contact-btn">
+            <a href="https://github.com/malhar-thanki" target="_blank" class="contact-btn">
                 <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="https://linkedin.com/in/malhar-thanki" target="_blank" class="contact-btn">
+            <a href="https://www.linkedin.com/in/thankimalhar/" target="_blank" class="contact-btn">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
         </div>
