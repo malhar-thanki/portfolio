@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (runQueryButton && output) {
         runQueryButton.addEventListener('click', function() {
             if (output.style.display === 'none' || output.style.display === '') {
-                output.textContent = "Data Engineer with more than 2.8 years of experience in designing, developing, and managing large-scale data pipelines. Skilled in SQL, Python, Spark, Hadoop, and ELT processes, with experience using Azure, AWS, and Databricks platforms. Contributed to the Digital Twin project, integrating multiple data sources to improve business operations, which won the Economic Times DataCon Award 2024. Focused on applying technology to solve data challenges.";
+                output.textContent = "Data Engineer with more than 3 years of experience in designing, developing, and managing large-scale data pipelines. Skilled in SQL, Python, Spark, Hadoop, and ELT processes, with experience using Azure, AWS, and Databricks platforms. Contributed to the Digital Twin project, integrating multiple data sources to improve business operations, which won the Economic Times DataCon Award 2024. Focused on applying technology to solve data challenges.";
                 output.style.display = 'block';
             } else {
                 output.style.display = 'none';
