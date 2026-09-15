@@ -412,9 +412,72 @@ input:checked + .slider:before {
     background-color: #115aa3;
 }
 
+/* Award Badge */
+.award-section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.award-badge {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #e8f2ff 0%, #f0f7ff 100%);
+    border: 1px solid #b8d4f5;
+    border-left: 4px solid #007BFF;
+    border-radius: 10px;
+    padding: 18px 24px;
+}
+
+.award-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.award-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.award-text strong {
+    color: #007BFF;
+    font-size: 1rem;
+}
+
+.award-text span {
+    color: #4A4A4A;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .award-badge {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .award-icon {
+        font-size: 1.5rem;
+    }
+
+    .award-text strong {
+        font-size: 0.95rem;
+    }
+
+    .award-text span {
+        font-size: 0.88rem;
+    }
+}
+
 /* Experience Section */
 .exp-item {
     margin-bottom: 40px;
+    position: relative;
+}
+
+.exp-item + .exp-item {
+    padding-top: 10px;
+    border-top: 1px dashed #d0e4f7;
 }
 
 .exp-company {
