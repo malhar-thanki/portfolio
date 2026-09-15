@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (runQueryButton && output) {
         runQueryButton.addEventListener('click', function() {
             if (output.style.display === 'none' || output.style.display === '') {
-                output.textContent = "Data Engineer with more than 3 years of experience in designing, developing, and managing large-scale data pipelines. Skilled in SQL, Python, Spark, Hadoop, and ELT processes, with experience using Azure, AWS, and Databricks platforms. Contributed to the Digital Twin project, integrating multiple data sources to improve business operations, which won the Economic Times DataCon Award 2024. Focused on applying technology to solve data challenges.";
+                output.textContent = "Data Engineer with 4 years of experience designing, developing, and managing large-scale data pipelines. Skilled in SQL, Python, Spark, Hadoop, and ELT processes, with experience using Azure, Snowflake, and Databricks platforms. Contributed to the Digital Twin project, integrating multiple data sources to improve business operations, which won the Economic Times DataCon Award 2024. Focused on applying technology to solve real-world data challenges.";
                 output.style.display = 'block';
             } else {
                 output.style.display = 'none';
@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Define your percentages here (total must equal 100%)
     const competenciesData = {
-        labels: ['Data Pipeline Development', 'Data Warehousing', 'Data Modeling', 'Performance & Cost Optimization'],
+        labels: ['Data Pipeline Development', 'Data Warehousing', 'Data Modeling', 'Performance & Cost Optimization', 'Data Mesh'],
         datasets: [{
-            data: [40, 30, 20, 10], // Replace with your desired percentages (e.g., [30, 25, 20, 25])
-            backgroundColor: ['#054a91', '#3e7cb1', '#81a4cd', '#dbe4ee'],
+            data: [35, 25, 18, 12, 10],
+            backgroundColor: ['#054a91', '#3e7cb1', '#81a4cd', '#dbe4ee', '#a8c8e8'],
             borderWidth: 1,
             borderColor: '#ffffff'
         }]
@@ -86,10 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
             skillsChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['SQL', 'Python', 'Spark', 'Hadoop', 'Azure', 'AWS', 'DWH/MDW', 'Databricks','Snowflake'],
+                    labels: ['SQL', 'Python', 'Spark', 'Hadoop', 'Azure', 'Snowflake', 'DWH/MDW', 'Databricks', 'Airflow'],
                     datasets: [{
                         label: 'Proficiency (0-10)',
-                        data: [8.5,8,8,9,8,5,9,7,5],
+                        data: [9, 8, 8.5, 8, 8.5, 8, 9, 7, 7],
                         backgroundColor: '#007BFF',
                         borderColor: '#0056b3',
                         borderWidth: 1
