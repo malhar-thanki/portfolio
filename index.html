@@ -55,6 +55,17 @@
         </div>
     </section>
 
+    <!-- Award Highlight -->
+    <section class="section award-section" id="award">
+        <div class="award-badge">
+            <span class="award-icon">🏆</span>
+            <div class="award-text">
+                <strong>Economic Times DataCon Award 2024</strong>
+                <span>Digital Twin Project — integrating multi-source data to improve business operations</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills -->
     <section class="section" id="skills">
         <div class="section-header">
@@ -67,11 +78,11 @@
         <div class="skills-content">
             <ul class="skills-list">
                 <li><strong>Programming Languages:</strong> SQL, Python</li>
-                <li><strong>Big Data Tools & Technologies:</strong> Spark, PySpark, Spark SQL, YARN, Hadoop, Hive, Kafka, Spark structured streaming</li>
-                <li><strong>Database Solutions & Warehousing:</strong> MySQL, MSSQL Server, Data Lakes, Data Warehousing, ETL/ELT, Stored Procedures</li>
-                <li><strong>Cloud Platforms:</strong> Azure Data Factory(ADF), Azure Synapse Analytics, Azure Data Lake Storage(ADLS), AWS Glue, AWS EMR,
-                    Amazon S3, Databricks, Snowflake</li>
-                <li><strong>DevOps, Version Control & Command Languages:</strong> Azure DevOps, CI/CD, GitHub, Airflow</li>
+                <li><strong>Big Data Tools & Technologies:</strong> Spark, PySpark, Spark SQL, YARN, Hadoop, Hive, Kafka, Spark structured streaming, Snowflake</li>
+                <li><strong>Database Solutions & Warehousing:</strong> MySQL, PostgreSQL, Data Lakes, Data Warehousing, ETL/ELT</li>
+                <li><strong>Cloud Platforms:</strong> Azure Data Factory (ADF), Azure Synapse Analytics, Azure Data Lake Storage (ADLS), Databricks</li>
+                <li><strong>DevOps & Tools:</strong> Azure DevOps, CI/CD, GitHub, Airflow</li>
+                <li><strong>Key Competencies:</strong> Data Pipeline Development, Data Warehousing, Data Modeling, Performance &amp; Cost Optimization, Data Mesh</li>
             </ul>
             <div class="skills-graph-container" style="display: none;">
                 <canvas id="skillsChart"></canvas>
@@ -90,28 +101,37 @@
     <!-- Experience -->
     <section class="section" id="experience">
         <h2>Experience</h2>
+
+        <!-- ZS Associates -->
         <div class="exp-item">
-            <h3 class="exp-company">Jio Data Platforms</h3>
+            <h3 class="exp-company">ZS Associates</h3>
             <div class="exp-roles">
                 <div class="exp-role">
-                    <h4>Data Engineer <span class="exp-duration">April 2023 – Present</span></h4>
+                    <h4>Associate Consultant, Sr. Data Engineer <span class="exp-duration">Sept 2025 – Present</span></h4>
                     <ul class="exp-details">
-                        <li>Designed and deployed scalable data pipelines using <b>Azure Synapse Analytics</b> and <b>Azure Data Factory</b>, enabling real-time and batch data processing for analytics, with optimized data modeling for storage and retrieval.</li>
-                        <li>Processed large-scale datasets, optimized SQL queries and Spark jobs by refactoring code, <b>improving data processing speed by 15%</b> and saving 20+ cloud compute hours monthly.</li>
-                        <li>Integrated multi-source data (inventory, customer, media, sensor) from <b>Azure, Oracle, MySQL, ODBC, and HDFS</b> in formats like Parquet, JSON, and CSV, managing millions of rows daily in Azure Data Lake Storage (ADLS).</li>
-                        <li><b>Automated failure alerts via Azure Logic Apps</b>, reducing manual interventions by 25% and enhancing pipeline reliability.</li>
-                        <li>Worked on a near real-time (NRT) SAP data ingestion PoC using <b>Spark Structured Streaming</b>, reducing latency and boosting data availability.</li>
-                        <li>Collaborated with cross-functional teams to define requirements, troubleshoot data issues, and deliver solutions aligned with organizational goals.</li>
-                        <li>Authored detailed documentation and mentored junior engineers, delivering training to streamline onboarding and knowledge sharing.</li>
+                        <li>Built and optimized stored procedures for <b>fact and dimension tables in Snowflake</b>, processing claims and marketing data at <b>100s of billions of rows</b> for omnichannel marketing analytics.</li>
+                        <li>Ingested and integrated marketing engagement data from <b>Salesforce Marketing Cloud (SFMC)</b> and other source systems into <b>Snowflake</b>, supporting fact/dimension tables across millions of records.</li>
+                        <li>Led a team of <b>2 associates</b>, gathering requirements from business stakeholders and BAs, assigning and reviewing development work against Snowflake pipeline logic.</li>
+                        <li>Performed QC through source-to-target reconciliation, validating data accuracy pre- and post-deployment to catch discrepancies before pipelines reached production.</li>
+                        <li>Designed a <b>semantic layer</b> over Snowflake fact and dimension tables for <b>Cortex Agents</b>, defining business-ready data structures to enable accurate, context-aware analytics.</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+
+        <!-- Reliance Jio -->
+        <div class="exp-item">
+            <h3 class="exp-company">Reliance Jio</h3>
+            <div class="exp-roles">
                 <div class="exp-role">
-                    <h4>Associate Data Engineer <span class="exp-duration">July 2022 – April 2023</span></h4>
+                    <h4>Data Engineer <span class="exp-duration">Aug 2022 – Aug 2025</span></h4>
                     <ul class="exp-details">
-                        <li>Built and maintained automated ETL pipelines with <b>Hadoop, Hive, and Kafka</b>, ingesting gigabytes of data daily for business analytics.</li>
-                        <li>Automated workflows for multiple use cases, transforming and loading data from diverse sources <b>data warehouses</b>.</li>
-                        <li>Resolved critical pipeline issues with rapid production fixes, leveraging KEDB style document to reduce downtime by 25%.</li>
-                        <li>Led 12-15 use cases including Hortonworks Data Platform (HDP) to Cloudera Data Platform (CDP) migration, managing end-to-end data workflows from ingestion to transformation.</li>
+                        <li>Optimized SQL queries and Spark jobs on Azure Synapse pipelines, <b>improving processing speed by 15%</b> and cutting <b>20+ cloud compute hours monthly</b>.</li>
+                        <li>Integrated multi-source data (Azure, Oracle, MySQL, ODBC, HDFS) in Parquet/JSON/CSV formats into ADLS, handling <b>millions of rows daily</b> across Hadoop, Hive, Kafka, and Airflow-orchestrated ETL pipelines.</li>
+                        <li>Automated failure alerting via Azure Logic Apps and built a KEDB-style runbook for production issues, <b>cutting manual interventions by 25%</b>.</li>
+                        <li>Worked on a near real-time (NRT) SAP data ingestion PoC using <b>Spark Structured Streaming</b>, reducing latency and boosting data availability.</li>
+                        <li>Authored detailed documentation and mentored junior engineers, delivering training to streamline onboarding and knowledge sharing.</li>
+                        <li>Migrated <b>10 of ~12–15 data workflows</b> from Hortonworks (HDP) to Cloudera (CDP), resolving platform-specific compatibility issues and validating data sanity post-migration.</li>
                     </ul>
                 </div>
             </div>
